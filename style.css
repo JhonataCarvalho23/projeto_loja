@@ -8,11 +8,25 @@
 
 *{box-sizing:border-box}
 html {scroll-behavior: smooth;}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:var(--accent);}
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
+  margin:0; 
+  background:var(--bg); 
+  color:var(--accent);
+  padding-top:70px; /* 🔹 Compensa o header fixo */
+}
 .container{max-width:1100px;margin:0 auto;padding:1rem}
 
 /* Header */
-.site-header{background:#fff;border-bottom:1px solid #000000; position: fixed; width: 100%;}
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #000000; 
+  position: fixed; 
+  width: 100%;
+  top: 0; 
+  left: 0;
+  z-index: 1000;
+}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem}
 .logo{font-size:1.25rem;margin:0}
 .nav{display:flex;gap:1rem}
@@ -43,13 +57,17 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .btn.ghost{background:transparent;padding:0.4rem 0.6rem}
 
 /* Sobre / Footer */
-.sobre{padding:2rem 0}
+.sobre{padding:2rem 0; text-align: center;}
 .site-footer{background:#163e6d;border-top:1px solid #000000;padding:1rem;margin-top:2rem}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 .footer-inner p {color: #fff;}
 
 
 /* ===== Responsivo aprimorado ===== */
+@media (max-width:1200px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
   .hero .container{flex-direction:column;align-items:center;text-align:center}
@@ -64,7 +82,7 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .nav.open{
     display:flex;
     position:absolute;
-    top:64px;
+    top:70px; /* 🔹 Bate com o padding-top do body */
     left:0;
     right:0;
     background:#fff;
@@ -79,6 +97,9 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
     flex-direction:column;
     padding:0 1rem;
   }
+  .hero-content { order: 1; }
+  .hero-image { order: 2; }
+
   .hero-content h2{font-size:1.5rem}
   .hero-content p{font-size:0.9rem}
   .btn{padding:0.5rem 0.8rem;font-size:0.9rem}
@@ -96,4 +117,3 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 
 /* Pequenos ajustes visuais */
 a{color:inherit}
-
