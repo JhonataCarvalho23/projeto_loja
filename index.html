@@ -24,6 +24,7 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
@@ -32,34 +33,35 @@
           <a class="btn" href="#produtos">Ver produtos</a>
         </div>
         <div class="hero-image">
-          <img src="https://picsum.photos/seed/2/400/400" alt="Camiseta destaque" height="500px" width="500px">
+          <img src="https://picsum.photos/seed/2/400/400" alt="Camiseta destaque" height="500" width="500">
         </div>
       </div>
     </section>
 
+    <!-- Produtos -->
     <section id="produtos" class="container produtos">
       <h3 class="section-title">Nossos produtos</h3>
       <div class="grid">
         <article class="card">
           <img src="https://picsum.photos/seed/2/400/400" alt="Camiseta 1">
           <div class="card-body">
-            <h4>Camiseta Basica</h4>
+            <h4>Camiseta Básica</h4>
             <p class="price">R$ 149,99</p>
             <div class="card-actions">
-              <button class="btn add-to-cart" data-name="Camiseta Basica" data-price="149.99">Adicionar</button>
-              <a class="btn ghost" href="#">Ver</a>
+              <button class="btn add-to-cart" data-name="Camiseta Básica" data-price="149.99">Adicionar</button>
+              <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="https://picsum.photos/seed/2/400/400" alt="Camiseta 2">
+          <img src="https://picsum.photos/seed/21/400/400" alt="Camiseta 2">
           <div class="card-body">
             <h4>Camiseta Minimal</h4>
             <p class="price">R$ 59,90</p>
             <div class="card-actions">
               <button class="btn add-to-cart" data-name="Camiseta Minimal" data-price="59.90">Adicionar</button>
-              <a class="btn ghost" href="#">Ver</a>
+              <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
         </article>
@@ -71,31 +73,21 @@
             <p class="price">R$ 79,90</p>
             <div class="card-actions">
               <button class="btn add-to-cart" data-name="Camiseta Nature" data-price="79.90">Adicionar</button>
-              <a class="btn ghost" href="#">Ver</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://picsum.photos/seed/3/400/400" alt="Camiseta 3">
-          <div class="card-body">
-            <h4>Camiseta Nature</h4>
-            <p class="price">R$ 79,90</p>
-            <div class="card-actions">
-              <button class="btn add-to-cart" data-name="Camiseta Nature" data-price="79.90">Adicionar</button>
-              <a class="btn ghost" href="#">Ver</a>
+              <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
         </article>
       </div>
     </section>
 
+    <!-- Sobre -->
     <section id="sobre" class="container sobre">
       <h3>Sobre a marca</h3>
       <p>Somos uma pequena marca independente que cria estampas autorais e valoriza qualidade e sustentabilidade.</p>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer class="site-footer" id="contato">
     <div class="container footer-inner">
       <p>© <span id="ano">2025</span> MinhaCamiseta — Todos os direitos reservados</p>
@@ -105,7 +97,26 @@
     </div>
   </footer>
 
-  <!-- Importando o JS externo -->
+  <!-- Modal de Detalhes do Produto -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-images">
+          <img id="frontImage" src="" alt="Frente da camiseta">
+          <img id="backImage" src="" alt="Verso da camiseta">
+        </div>
+        <div class="modal-info">
+          <h2 id="productTitle"></h2>
+          <p id="productPrice"></p>
+          <p><strong>Cores disponíveis:</strong> Preto, Branco, Azul</p>
+          <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
