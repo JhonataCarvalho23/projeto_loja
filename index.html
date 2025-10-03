@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="logo">loja</h1>
@@ -17,12 +18,13 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="actions">
-        <button class="cart-btn" id="cartBtn">Carrinho (<span id="cartCount">0</span>)</button>
+        <button class="cart-btn" id="cartBtn">🛒 (<span id="cartCount">0</span>)</button>
         <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main>
     <!-- Hero -->
     <section class="hero">
@@ -42,37 +44,40 @@
     <section id="produtos" class="container produtos">
       <h3 class="section-title">Nossos produtos</h3>
       <div class="grid">
+        <!-- Produto 1 -->
         <article class="card">
           <img src="https://picsum.photos/seed/2/400/400" alt="Camiseta 1">
           <div class="card-body">
             <h4>Camiseta Básica</h4>
             <p class="price">R$ 149,99</p>
             <div class="card-actions">
-              <button class="btn add-to-cart" data-name="Camiseta Básica" data-price="149.99">Adicionar</button>
+              <button class="btn add-to-cart" data-name="Camiseta Básica" data-price="149.99" data-img="https://picsum.photos/seed/2/400/400">Adicionar</button>
               <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
         </article>
 
+        <!-- Produto 2 -->
         <article class="card">
           <img src="https://picsum.photos/seed/21/400/400" alt="Camiseta 2">
           <div class="card-body">
             <h4>Camiseta Minimal</h4>
             <p class="price">R$ 59,90</p>
             <div class="card-actions">
-              <button class="btn add-to-cart" data-name="Camiseta Minimal" data-price="59.90">Adicionar</button>
+              <button class="btn add-to-cart" data-name="Camiseta Minimal" data-price="59.90" data-img="https://picsum.photos/seed/21/400/400">Adicionar</button>
               <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
         </article>
 
+        <!-- Produto 3 -->
         <article class="card">
           <img src="https://picsum.photos/seed/3/400/400" alt="Camiseta 3">
           <div class="card-body">
             <h4>Camiseta Nature</h4>
             <p class="price">R$ 79,90</p>
             <div class="card-actions">
-              <button class="btn add-to-cart" data-name="Camiseta Nature" data-price="79.90">Adicionar</button>
+              <button class="btn add-to-cart" data-name="Camiseta Nature" data-price="79.90" data-img="https://picsum.photos/seed/3/400/400">Adicionar</button>
               <a class="btn ghost view-product" href="#">Ver</a>
             </div>
           </div>
@@ -87,17 +92,7 @@
     </section>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="site-footer" id="contato">
-    <div class="container footer-inner">
-      <p>© <span id="ano">2025</span> MinhaCamiseta — Todos os direitos reservados</p>
-      <div>
-        <p>Contato: (11) 99999-9999</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Modal de Detalhes do Produto -->
+  <!-- Modal de Produto -->
   <div class="modal" id="productModal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
@@ -111,12 +106,33 @@
           <p id="productPrice"></p>
           <p><strong>Cores disponíveis:</strong> Preto, Branco, Azul</p>
           <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+          <button id="buyButton" class="buy-btn">Adicionar ao carrinho</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Script -->
+  <!-- Modal do Carrinho -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close" id="closeCart">&times;</span>
+      <h2>🛒 Meu Carrinho</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"><strong>Total:</strong> R$ 0,00</p>
+      <button id="checkoutButton" class="buy-btn">Confirmar Compra</button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="site-footer" id="contato">
+    <div class="container footer-inner">
+      <p>© <span id="ano">2025</span> MinhaCamiseta — Todos os direitos reservados</p>
+      <div>
+        <p>Contato: (11) 99999-9999</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
