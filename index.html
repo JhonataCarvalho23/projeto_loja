@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja de Camisetas — Minha Marca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">loja</h1>
+      <nav class="nav" id="mainNav">
+        <a href="#">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="actions">
+        <button class="cart-btn" id="cartBtn">🛒 (<span id="cartCount">0</span>)</button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Camisetas confortáveis. Design autoral.</h2>
+          <p>Envio para todo o Brasil • Troca fácil em até 7 dias</p>
+          <a class="btn" href="#produtos">Ver produtos</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/250px-Palmeiras_logo.svg.png" alt="Camiseta destaque" height="400" width="400">
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="container produtos">
+      <h3 class="section-title">Nossos produtos</h3>
+      <div class="grid">
+        <!-- Produto 1 -->
+        <article class="card">
+          <img src="https://grupooscar.vteximg.com.br/arquivos/ids/1508394/Puma-Camiseta-782428-01-PALMEIRAS-AWAY-2025-6.jpg.jpg?v=638817912134370000" alt="Camiseta 1" data-front="" data-back="">
+          <div class="card-body">
+            <h4>Camiseta Básica Estampa 1</h4>
+            <p class="price">R$ 149,99</p>
+            <div class="card-actions">
+              <button class="btn add-to-cart" data-name="Camiseta Básica" data-price="149.99" data-img="https://picsum.photos/seed/2/400/400">Adicionar</button>
+              <a class="btn ghost view-product" href="#">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 2 -->
+        <article class="card">
+          <img src="https://static.kapiva.com.br/public/kapiva/imagens/produtos/camisa-palmeiras-puma-i-home-2024-2025-verde-6626ca743be61.jpg" alt="Camiseta 2" data-front="" data-back="">
+          <div class="card-body">
+            <h4>Camiseta Básica Estampa 2</h4>
+            <p class="price">R$ 179,99</p>
+            <div class="card-actions">
+              <button class="btn add-to-cart" data-name="Camiseta Minimal" data-price="59.90" data-img="https://picsum.photos/seed/21/400/400">Adicionar</button>
+              <a class="btn ghost view-product" href="#">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 3 -->
+        <article class="card">
+          <img src="https://lojapalmeiras.vtexassets.com/arquivos/ids/193558/781148_11.jpg?v=638851566654600000" alt="Camiseta 3" data-front="" data-back="">
+          <div class="card-body">
+            <h4>Moletom Estampa 1</h4>
+            <p class="price">R$ 199,99</p>
+            <div class="card-actions">
+              <button class="btn add-to-cart" data-name="Camiseta Nature" data-price="79.90" data-img="https://picsum.photos/seed/3/400/400">Adicionar</button>
+              <a class="btn ghost view-product" href="#">Ver</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="container sobre">
+      <h3>Sobre a marca</h3>
+      <p>Somos uma pequena marca independente que cria estampas autorais e valoriza qualidade e sustentabilidade.</p>
+    </section>
+  </main>
+
+  <!-- Modal de Produto -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-body">
+        <div class="modal-images">
+          <img id="frontImage" src="" alt="Frente da camiseta">
+          <img id="backImage" src="" alt="Verso da camiseta">
+        </div>
+        <div class="modal-info">
+          <h2 id="productTitle"></h2>
+          <p id="productPrice"></p>
+          <p><strong>Cores disponíveis:</strong> Preta e Branca</p>
+          <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+          <button id="buyButton" class="buy-btn">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal do Carrinho -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close" id="closeCart">&times;</span>
+      <h2>🛒 Meu Carrinho</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"><strong>Total:</strong> R$ 0,00</p>
+      <button id="checkoutButton" class="buy-btn">Confirmar Compra</button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="site-footer" id="contato">
+    <div class="container footer-inner">
+      <p>© <span id="ano">2025</span> MinhaCamiseta — Todos os direitos reservados</p>
+      <div>
+        <p>Contato: (11) 99999-9999</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
